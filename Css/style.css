@@ -1,0 +1,152 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main{
+    flex-grow: 1;
+}
+
+picture{
+    display: block;
+}
+img{
+    display: block;
+    max-inline-size: 100%;
+    height: auto;
+    border-radius: 1em;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+inner-column{
+    width: 98%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+section.third-layer{
+    background-color: #E5E4E2;
+}
+/* typography */
+inner-column quote-author{
+    font-size: 1.70em;
+    font-family: 'Bona Nova',;
+
+    
+}
+text-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.header-title{
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+p{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+diptych .header-title{
+    text-shadow: 2px 2px black;
+}
+
+/* Components */
+
+.button{
+    background-color: blue;
+    color: white;
+    padding: 0.6em 1em;
+    font-size: 0.9em;
+    line-height: 1.2;
+    display: inline-block;
+    border-radius: 5px;
+    width: min-content;
+
+}
+
+
+
+/* Modules */
+diptych{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+
+}
+
+diptych text-content p {
+margin-top: 10px;   }
+
+
+@media (min-width: 700px) {
+    diptych{
+ 
+        flex-direction: row-reverse;
+
+    }
+    diptych:is(text-content, picture){
+        flex-basis: 50%;
+    }
+    
+}
+
+
+
+.first-element{
+    background-color: #1f2937;
+    color: white;
+}
+.first-element .button{
+    background-color: rgba(11, 205, 244, 0.467);
+
+}
+.product{   
+    cursor: pointer;
+    border: 5px solid #3887f3;
+    padding:1em;
+    border-radius: 2em;
+    box-shadow: 2px 2px 2px 3px #333;
+}
+.product .header-title{
+    font-size: 1em;
+
+}
+products-grid{
+
+    display: block;
+}
+products-grid .product-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px, 1fr));
+    gap: 1em;
+}
+
+inner-column quote-author{
+
+display: flex;
+justify-content: end;
+
+}
+.content{
+    background-color: #1f2937;
+    color:white;
+    font-style: italic;
+    letter-spacing: 1px;
+}
